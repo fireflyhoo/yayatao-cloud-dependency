@@ -1,4 +1,7 @@
 ### IntelliJ project files
-.idea
+.idea/
 *.iml
 out/
+**/*.iml
+
+target/

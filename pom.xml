@@ -22,8 +22,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <junit.version>4.12</junit.version>
         <mockito-core.version>3.3.3</mockito-core.version>
-        <spring-cloud-gateway.version></spring-cloud-gateway.version>
-
     </properties>
 
     <dependencies>
@@ -42,11 +40,13 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-gateway</artifactId>
-                <version>2.2.2.RELEASE</version>
-            </dependency>
-        </dependencies>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR3</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+      </dependencies>
     </dependencyManagement>
     <repositories>
         <repository>
@@ -62,6 +62,8 @@
     </repositories>
     <modules>
         <module>yayatao-cloud-gateway</module>
+        <module>yayatao-cloud-eureka</module>
+        <module>modules</module>
     </modules>
     <build>
     </build>

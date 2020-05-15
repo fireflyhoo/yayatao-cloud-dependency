@@ -1,4 +1,4 @@
-package cn.yayatao.cloud.member;
+package cn.yayatao.cloud.member.api;
 
 import static org.junit.Assert.assertTrue;
 

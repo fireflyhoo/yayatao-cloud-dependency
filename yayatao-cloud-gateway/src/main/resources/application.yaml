@@ -17,6 +17,9 @@ spring:
           args:
             name: default
             fallbackUri: 'forward:/defaultfallback'
+      httpclient:
+        connectTimeout: 3000
+        responseTimeout: 3000
 
       # hystrix 信号量隔离，3秒后自动超时
       hystrix:

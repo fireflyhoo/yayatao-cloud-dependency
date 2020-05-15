@@ -1,4 +1,4 @@
-package cn.yayatao.cloud.member;
+package cn.yayatao.cloud.member.api;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

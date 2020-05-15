@@ -1,6 +1,6 @@
-package cn.yayatao.cloud.member.controller;
+package cn.yayatao.cloud.member.api.controller;
 
-import cn.yayatao.cloud.member.MemberServiceClient;
+import cn.yayatao.cloud.member.api.MemberServiceClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

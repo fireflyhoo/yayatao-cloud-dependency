@@ -8,9 +8,27 @@ spring:
     gateway:
       routes:
         - id: an
-          uri: 'https://www.coollf.com'
+          uri: 'lb://yayatao-member-service'
           predicates:
-            - Path=/an
+            - Path=/member/*
+      filters:
+        # 熔断降级配置
+        - name: Hystrix
+          args:
+            name: default
+            fallbackUri: 'forward:/defaultfallback'
+
+      # hystrix 信号量隔离，3秒后自动超时
+      hystrix:
+        command:
+          default:
+            execution:
+              isolation:
+                strategy: SEMAPHORE
+                thread:
+                  timeoutInMilliseconds: 3000
+        shareSecurityContext: true
+
 
 eureka:
   instance:
@@ -21,5 +39,4 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka
-
 

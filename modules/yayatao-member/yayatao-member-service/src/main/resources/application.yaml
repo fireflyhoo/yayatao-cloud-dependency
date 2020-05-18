@@ -1,5 +1,9 @@
 server:
   port: 8001
+  undertow:
+    direct-buffers: true
+    io-threads: 8
+    worker-threads: 320
 
 spring:
   application:
@@ -14,4 +18,3 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka
-

@@ -64,6 +64,7 @@
         <module>yayatao-cloud-gateway</module>
         <module>yayatao-cloud-eureka</module>
         <module>modules</module>
+        <module>yayatao-member-app</module>
     </modules>
     <build>
     </build>

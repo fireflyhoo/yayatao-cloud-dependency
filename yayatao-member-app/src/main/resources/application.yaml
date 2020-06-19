@@ -16,5 +16,9 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
+    registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://eureka02:8762/eureka/,http://eureka03:8763/eureka/
+
+ribbon:
+  serverListRefreshInterval: 1

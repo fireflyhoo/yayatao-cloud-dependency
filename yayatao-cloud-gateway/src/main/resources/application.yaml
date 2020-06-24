@@ -20,6 +20,11 @@ spring:
       httpclient:
         connectTimeout: 3000
         responseTimeout: 3000
+        pool:
+          type: elastic
+          maxIdleTime: 30s
+
+
 
       # hystrix 信号量隔离，3秒后自动超时
       hystrix:
@@ -41,5 +46,5 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://eureka01:8761/eureka/,http://eureka02:8762/eureka/,http://eureka03:8763/eureka/
 

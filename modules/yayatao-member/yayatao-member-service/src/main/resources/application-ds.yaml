@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: 8002
   undertow:
     direct-buffers: true
     io-threads: 8
@@ -7,7 +7,7 @@ server:
 
 spring:
   application:
-    name: yayatao-member-app
+    name: yayatao-member-service
 
 eureka:
   instance:
@@ -16,9 +16,5 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://eureka01:8761/eureka/,http://eureka02:8762/eureka/,http://eureka03:8763/eureka/
-
-ribbon:
-  serverListRefreshInterval: 1

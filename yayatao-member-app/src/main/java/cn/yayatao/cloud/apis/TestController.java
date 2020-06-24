@@ -1,11 +1,10 @@
 package cn.yayatao.cloud.apis;
 
 import cn.yayatao.cloud.member.api.MemberServiceClient;
+import cn.yayatao.cloud.model.GetUserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/")
@@ -17,6 +16,12 @@ public class TestController   {
     @ResponseBody
     public String index(){
         return client.sayHi("xxx");
+    }
+
+
+    @PostMapping("/user")
+    public  String getUser(@Validated @RequestBody GetUserRequest getUser){
+        return "测试成功";
     }
 
 }
